@@ -20,6 +20,11 @@ BOARD_USES_GENERIC_AUDIO := true
 USE_CAMERA_STUB := true
 
 # Kernel variables.  Allow vendor to overwrite
+TARGET_NO_KERNEL := false
+TARGET_BUILD_KERNEL ?= false
+TARGET_BUILD_KERNEL_MODULES ?= false
+TARGET_KERNEL_DEFCONFIG ?= panda_defconfig
+TARGET_KERNEL_LOCATION ?= kernel/omap
 TARGET_PREBUILT_KERNEL ?= device/ti/panda/kernel
 
 # Use the non-open-source parts, if they're present
